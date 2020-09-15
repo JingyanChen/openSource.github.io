@@ -1,0 +1,26 @@
+site_name: 博流智能开源社区
+nav:
+  - 首页: index.md
+  - RISC-V简介: RISC-V简介.md
+  - BL564芯片: 
+    - BL564芯片简介: BL564芯片/BL564芯片.md
+    - E21内核: BL564芯片/E21内核.md
+    - 购买途径: BL564芯片/购买途径.md
+  - BL564-IOT开发板简介: 
+      - 开发板简介: BL564-iot-board/BL564-IOT开发板简介.md
+      - Quickly_Started_Guide : 
+        - 编译环境的搭建 : Quickly_Started_Guide/编译环境的搭建.md
+        - 编译与运行项目 : Quickly_Started_Guide/编译与运行项目.md
+        - 获取最新的SDK支持包 : Quickly_Started_Guide/获取最新的SDK支持包.md
+        - 烧写工具的使用 : Quickly_Started_Guide/烧写工具的使用.md
+        - 仿真调试 : Quickly_Started_Guide/仿真调试.md
+      - Application Note : 
+        - AN018-BL564播放音频 : Application Note/AN018-BL564播放音频.md
+        - AN019-BL564驱动液晶屏 : Application Note/AN019-BL564液晶显示屏.md
+      - 更多学习资料 : 更多学习资料/更多学习资料.md
+theme:
+    name: "readthedocs"
+    palette:
+        primary: "black"
+        accent: "deep orange"
+    language: "zh"

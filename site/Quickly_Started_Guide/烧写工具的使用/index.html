@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>烧写工具的使用 - 博流智能开源社区</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u70e7\u5199\u5de5\u5177\u7684\u4f7f\u7528";
+    var mkdocs_page_input_path = "Quickly_Started_Guide\\\u70e7\u5199\u5de5\u5177\u7684\u4f7f\u7528.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> 博流智能开源社区</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">首页</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../RISC-V%E7%AE%80%E4%BB%8B/">RISC-V简介</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">BL564芯片</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../BL564%E8%8A%AF%E7%89%87/BL564%E8%8A%AF%E7%89%87/">BL564芯片简介</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../BL564%E8%8A%AF%E7%89%87/E21%E5%86%85%E6%A0%B8/">E21内核</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../BL564%E8%8A%AF%E7%89%87/%E8%B4%AD%E4%B9%B0%E9%80%94%E5%BE%84/">购买途径</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">BL564-IOT开发板简介</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../../BL564-iot-board/BL564-IOT%E5%BC%80%E5%8F%91%E6%9D%BF%E7%AE%80%E4%BB%8B/">开发板简介</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="#">Quickly_Started_Guide</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/">编译环境的搭建</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../%E7%BC%96%E8%AF%91%E4%B8%8E%E8%BF%90%E8%A1%8C%E9%A1%B9%E7%9B%AE/">编译与运行项目</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../%E8%8E%B7%E5%8F%96%E6%9C%80%E6%96%B0%E7%9A%84SDK%E6%94%AF%E6%8C%81%E5%8C%85/">获取最新的SDK支持包</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">烧写工具的使用</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../%E4%BB%BF%E7%9C%9F%E8%B0%83%E8%AF%95/">仿真调试</a>
+                </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Application Note</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Application%20Note/AN018-BL564%E6%92%AD%E6%94%BE%E9%9F%B3%E9%A2%91/">AN018-BL564播放音频</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Application%20Note/AN019-BL564%E6%B6%B2%E6%99%B6%E6%98%BE%E7%A4%BA%E5%B1%8F/">AN019-BL564驱动液晶屏</a>
+                </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../%E6%9B%B4%E5%A4%9A%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%9B%B4%E5%A4%9A%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/">更多学习资料</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">博流智能开源社区</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Quickly_Started_Guide &raquo;</li>
+        
+      
+        
+          <li>BL564-IOT开发板简介 &raquo;</li>
+        
+      
+    
+    <li>烧写工具的使用</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../%E4%BB%BF%E7%9C%9F%E8%B0%83%E8%AF%95/" class="btn btn-neutral float-right" title="仿真调试">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../%E8%8E%B7%E5%8F%96%E6%9C%80%E6%96%B0%E7%9A%84SDK%E6%94%AF%E6%8C%81%E5%8C%85/" class="btn btn-neutral" title="获取最新的SDK支持包"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../%E8%8E%B7%E5%8F%96%E6%9C%80%E6%96%B0%E7%9A%84SDK%E6%94%AF%E6%8C%81%E5%8C%85/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../%E4%BB%BF%E7%9C%9F%E8%B0%83%E8%AF%95/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
